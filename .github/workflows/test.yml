@@ -34,7 +34,7 @@ jobs:
       # - name: Install sequelize cli
       #   run: npm install -g sequelize-cli
       - name: Do migration
-        run: sequelize db:migrate --env test
+        run: npx sequelize-cli db:migrate --env test
       # - name: Do seeding
       #   run: sequelize db:seed:all --env test
       # - run: npm run build --if-present
