@@ -7,9 +7,9 @@ module.exports = {
         dialect: "postgres",
     },
     test: {
-        username: process.env.DB_USERNAME_TEST,
-        password: process.env.DB_PASSWORD_TEST,
-        database: process.env.DB_DATABASE_TEST,
+        username: process.env.DB_USERNAME_TEST || "postgres",
+        password: process.env.DB_PASSWORD_TEST || "postgres",
+        database: process.env.DB_DATABASE_TEST || "be-hj-test-test",
         host: "127.0.0.1",
         dialect: "postgres",
         logging: false,
