@@ -32,3 +32,9 @@ DB_PASSWORD_PROD
 DB_DATABASE_PROD
 DB_HOST_PROD
 ```
+
+5. Database Table
+
+There's 5 Table created on migration (orders, customers, payments, vendors, and products)
+
+<img src="./data/db-table.png" style="text-align: center;">
