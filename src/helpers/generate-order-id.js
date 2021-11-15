@@ -7,9 +7,10 @@ module.exports = () => {
         charset: "alphanumeric",
     });
     const date = new Date();
+    const hour = String(date.getHours());
     const idWithDate =
         generatedString +
-        date.getHours() +
+        (hour.length == 1 ? 0 + hour : hour) +
         date.getDate() +
         date.getMonth() +
         String(date.getFullYear()).slice(2);

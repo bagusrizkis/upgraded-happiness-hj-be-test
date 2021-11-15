@@ -29,9 +29,12 @@ describe(":: Helpers Test ::", () => {
             expect(orderId.length).toBe(14);
 
             const date = new Date();
+            let hour = String(date.getHours());
             orderId = orderId.slice(6);
 
-            expect(orderId[0] + orderId[1]).toBe(String(date.getHours()));
+            expect(orderId[0] + orderId[1]).toBe(
+                hour.length == 1 ? 0 + hour : hour
+            );
             expect(orderId[2] + orderId[3]).toBe(String(date.getDate()));
             expect(orderId[4] + orderId[5]).toBe(String(date.getMonth()));
             expect(orderId[6] + orderId[7]).toBe(
